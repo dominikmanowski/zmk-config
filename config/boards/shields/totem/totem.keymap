@@ -24,8 +24,6 @@
 #define Num         5
 #define Fun         6
 #define Button      7
-#define Game        8
-#define Gameplus    9
 
 &mt {
     quick-tap-ms = <100>;
@@ -137,26 +135,6 @@
                 &kp LGUI           &kp LALT     &kp LCTRL  &kp LSHIFT  &bt BT_SEL 1         &none  &kp RSHIFT  &kp RCTRL     &kp RALT  &kp RGUI  
         &none  &ext_power EP_TOG  &none       &none     &none      &bt BT_SEL 2         &none      &none     &none       &none    &none  &none
                                                 &none     &none      &none               &none      &none     &none
-        >;
-    };
-
-    Game {
-        label = "Game";
-        bindings = <
-                &kp TAB         &kp Z  &kp X       &kp C         &kp V            &none  &none  &none  &none  &none  
-                &kp LEFT_SHIFT  &kp Q  &kp W       &kp E         &kp R            &none  &none  &none  &none  &none  
-        &none  &kp LCTRL       &kp A  &kp S       &kp D         &kp F            &none  &none  &none  &none  &none  &none
-                                       &kp LALT    &lt 9 ESCAPE  &kp SPACE        &none  &none  &none
-        >;
-    };
-
-    Gameplus {
-        label = "Gameplus";
-        bindings = <
-                &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &none  &none  &none  &none  &none  
-                &kp G         &none        &none        &none        &kp T               &none  &none  &none  &none  &none  
-        &none  &kp TAB       &none        &none        &none        &kp B               &none  &none  &none  &none  &none  &none
-                                            &kp ESCAPE    &none        &tog 8              &none  &none  &none
         >;
     };
   };
