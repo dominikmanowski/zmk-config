@@ -25,6 +25,24 @@
 #define Gameplus    9
 
 / {
+    behaviors {
+        tdl: tdl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Tap Dance Left";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp LEFT>, <&kp LA(LEFT_ARROW)>;
+        };
+
+        tdr: tdr {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Tap Dance Right";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp RIGHT>, <&kp LA(RIGHT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -41,8 +59,8 @@
         Nav {
             bindings = <
        &none      &none     &none      &none     &none                       &none  &none     &none          &none        &none
-       &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI  &kp LS(LA(LC(LEFT_GUI)))    &none  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT
-&none  &none      &none     &none      &none     &none                       &none  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
+       &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI  &kp LS(LA(LC(LEFT_GUI)))    &none  &tdl      &kp DOWN       &kp UP       &tdr
+&none  &none      &none     &none      &none     &none                       &none  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &none
                             &none      &none     &none                       &none  &none     &none
             >;
         };
