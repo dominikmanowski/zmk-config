@@ -25,7 +25,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance Left";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             bindings = <&kp LEFT>, <&kp LA(LEFT_ARROW)>;
         };
 
@@ -33,7 +33,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance Right";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             bindings = <&kp RIGHT>, <&kp LA(RIGHT)>;
         };
 
@@ -107,6 +107,37 @@
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <16 17>;
+            layers = <0>;
+        };
+
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <24 23>;
+        };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <23 22>;
+        };
+
+        paste {
+            bindings = <&kp LG(P)>;
+            key-positions = <22 21>;
+        };
+
+        undu {
+            bindings = <&kp LG(Z)>;
+            key-positions = <21 22>;
         };
     };
 
