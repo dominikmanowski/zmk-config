@@ -62,7 +62,6 @@
             hold-trigger-on-release;
         };
 
-
         brackets: brackets {
             compatible = "zmk,behavior-tap-dance";
             label = "Brackets";
@@ -127,6 +126,15 @@
        &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI  &kp LS(LA(LC(LEFT_GUI)))    &none  &tdl      &kp DOWN       &kp UP       &tdr
 &none  &none      &none     &none      &none     &none                       &none  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &none
                             &none      &none     &none                       &none  &none     &none
+            >;
+        };
+
+        Num {
+            bindings = <
+       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                     &none  &none  &none    &none  &none  &none
             >;
         };
     };
