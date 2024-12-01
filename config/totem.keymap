@@ -142,7 +142,7 @@
 
         paste {
             bindings = <&kp LG(P)>;
-            key-positions = <22 21>;
+            key-positions = <22 24>;
             layers = <0>;
         };
 
