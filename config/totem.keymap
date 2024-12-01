@@ -105,8 +105,17 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Backspace";
             #binding-cells = <0>;
-            tapping-term-ms = <175>;
             bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
+        };
+
+        lbspc: lbspc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Layer_backspace";
+            bindings = <&mo>, <&backspace>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
         };
     };
 
@@ -154,7 +163,7 @@
            &kp Q         &kp W            &kp E          &kp R        &kp T                      &kp Y                    &kp U        &kp I          &kp O        &kp P
            &hml LCTRL A  &hml LEFT_ALT S  &hml LSHIFT D  &hml LGUI F  &hml LS(LA(LC(LGUI))) G    &hmr RS(RA(RC(RGUI))) H  &hmr RGUI J  &hmr RSHIFT K  &hml RALT L  &hmr RCTRL SEMI
 &kp GRAVE  &kp Z         &kp X            &kp C          &kp V        &kp B                      &kp N                    &kp M        &kp COMMA      &kp DOT      &kp FSLH         &kp SQT
-                                          &kp ESC        &lt 1 SPACE  &lt 3 TAB                  &lt 2 BACKSPACE          &lt 4 SPACE  &kp RALT
+                                          &kp ESC        &lt 1 SPACE  &lt 3 TAB                  &lbspc 2 0               &lt 4 SPACE  &kp RALT
             >;
         };
 
