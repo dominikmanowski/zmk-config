@@ -131,26 +131,31 @@
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <24 23>;
+            layers = <0>;
         };
 
         cut {
             bindings = <&kp LG(X)>;
             key-positions = <23 22>;
+            layers = <0>;
         };
 
         paste {
             bindings = <&kp LG(P)>;
             key-positions = <22 21>;
+            layers = <0>;
         };
 
         undu {
             bindings = <&kp LG(Z)>;
             key-positions = <21 22>;
+            layers = <0>;
         };
 
         caps-word {
             bindings = <&caps_word>;
             key-positions = <12 17>;
+            layers = <0>;
         };
     };
 
