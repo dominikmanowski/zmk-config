@@ -106,6 +106,8 @@
             label = "Backspace";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
+
+            tapping-term-ms = <250>;
         };
 
         lbspc: lbspc {
@@ -114,8 +116,9 @@
             bindings = <&mo>, <&backspace>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <225>;
         };
     };
 
