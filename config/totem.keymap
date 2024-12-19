@@ -171,6 +171,13 @@
             key-positions = <12 17>;
             layers = <0>;
         };
+
+        tab {
+            bindings = <&enter LS(LGUI) TAB>;
+            key-positions = <12 13>;
+            slow-release;
+            layers = <0>;
+        };
     };
 
     keymap {
