@@ -12,6 +12,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include "zmk-helpers/helper.h"
 
 #define Base        0
 #define Nav         1
