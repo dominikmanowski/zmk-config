@@ -134,10 +134,19 @@
         comma_inner_morph: comma_inner_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_INNER_MORPH";
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp LT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
+        };
+
+        comma_morph: comma_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_MORPH";
+            bindings = <&kp COMMA>, <&comma_inner_morph>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
