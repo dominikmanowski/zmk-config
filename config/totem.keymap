@@ -14,11 +14,36 @@
 #include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/helper.h"
 
+/* source key position labels */
+#include "zmk-helpers/key-labels/totem.h"
+
+// #include <boards/shields/totem/behaviors.dtsi>
+#include <boards/shields/totem/combos.dtsi>
+
 #define Base        0
 #define Nav         1
 #define Num         2
 #define Sym         3
 #define Fun         4
+
+
+// reuse basic mod-morph scheme
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+    ZMK_MOD_MORPH(NAME, \
+        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
+
+// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
+SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
+SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
+
+// tap: dot | shift + tap: colon | ctrl + shift + tap: >
+SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
+SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
+
+// tap: qmark | shift + tap: excl
+SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
 / {
     behaviors {
@@ -122,9 +147,9 @@
             quick-tap-ms = <225>;
         };
 
-        enter: enter {
+        th: th {
             compatible = "zmk,behavior-hold-tap";
-            label = "ENTER";
+            label = "tap_hold";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -178,53 +203,53 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
+    // combos {
+    //     compatible = "zmk,combos";
 
-        enter {
-            bindings = <&enter RS(RIGHT_GUI) ENTER>;
-            key-positions = <16 17>;
-            layers = <0>;
-            slow-release;
-        };
+    //     enter {
+    //         bindings = <&enter RS(RIGHT_GUI) ENTER>;
+    //         key-positions = <16 17>;
+    //         layers = <0>;
+    //         slow-release;
+    //     };
 
-        copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <24 23>;
-            layers = <0>;
-        };
+    //     copy {
+    //         bindings = <&kp LG(C)>;
+    //         key-positions = <24 23>;
+    //         layers = <0>;
+    //     };
 
-        cut {
-            bindings = <&kp LG(X)>;
-            key-positions = <23 22>;
-            layers = <0>;
-        };
+    //     cut {
+    //         bindings = <&kp LG(X)>;
+    //         key-positions = <23 22>;
+    //         layers = <0>;
+    //     };
 
-        paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <22 24>;
-            layers = <0>;
-        };
+    //     paste {
+    //         bindings = <&kp LG(V)>;
+    //         key-positions = <22 24>;
+    //         layers = <0>;
+    //     };
 
-        undu {
-            bindings = <&kp LG(Z)>;
-            key-positions = <21 22>;
-            layers = <0>;
-        };
+    //     undu {
+    //         bindings = <&kp LG(Z)>;
+    //         key-positions = <21 22>;
+    //         layers = <0>;
+    //     };
 
-        caps-word {
-            bindings = <&caps_word>;
-            key-positions = <12 17>;
-            layers = <0>;
-        };
+    //     caps-word {
+    //         bindings = <&caps_word>;
+    //         key-positions = <12 17>;
+    //         layers = <0>;
+    //     };
 
-        tab {
-            bindings = <&enter LS(LGUI) TAB>;
-            key-positions = <12 13>;
-            slow-release;
-            layers = <0>;
-        };
-    };
+    //     tab {
+    //         bindings = <&enter LS(LGUI) TAB>;
+    //         key-positions = <12 13>;
+    //         slow-release;
+    //         layers = <0>;
+    //     };
+    // };
 
     keymap {
         compatible = "zmk,keymap";
