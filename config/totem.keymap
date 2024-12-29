@@ -267,57 +267,38 @@ ZMK_COMBO(caps-word, &caps_word,         LB4 LB3, Base)
     // };
 
 
-    keymap {
-        compatible = "zmk,keymap";
-
-        Base {
-            label = "Base";
-            bindings = <
+ZMK_LAYER(Base,
            &kp Q         &kp W            &kp E        &kp R          &kp T                      &kp Y                    &kp U          &kp I         &kp O        &kp P
            &hml LCTRL A  &hml LEFT_ALT S  &hml LGUI D  &hml LSHIFT F  &hml LS(LA(LC(LGUI))) G    &hmr RS(RA(RC(RGUI))) H  &hmr RSHIFT J  &hmr RGUI K   &hml RALT L  &hmr RCTRL SEMI
 &kp GRAVE  &kp Z         &kp X            &kp C        &kp V          &kp B                      &kp N                    &kp M          &comma_morph  &dot_morph   &qmark           &kp SQT
                                           &kp ESC      &lt 1 SPACE    &lt 3 TAB                  &lt 2 BACKSPACE          &lt 4 SPACE    &kp RALT
-            >;
-        };
+);
 
-        Nav {
-            label = "Nav";
-            bindings = <
+ZMK_LAYER(Nav, 
        &none      &none     &none     &none       &none                       &none  &none     &none          &none        &none
        &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHIFT  &kp LS(LA(LC(LEFT_GUI)))    &none  &tdl      &kp DOWN       &kp UP       &tdr
 &none  &none      &none     &none     &none       &none                       &none  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &none
                             &none     &none       &none                       &none  &none     &none
-            >;
-        };
+);
 
-        Num {
-            label = "Num";
-            bindings = <
+ZMK_LAYER(Num,
        &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none    &none  &none       &none     &none          &none
        &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none    &none  &kp RSHIFT  &kp RGUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL
 &none  &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none    &none  &none       &none     &none          &none              &none
                             &kp NUMBER_0  &none         &none    &none  &none       &none
-            >;
-        };
+);
 
-        Sym {
-            label = "Sym";
-            bindings = <
+ZMK_LAYER(Sym,
        &none         &none         &none     &none       &none                   &kp BACKSLASH  &kp AMPERSAND    &kp ASTERISK  &parenthesis  &kp MINUS
        &kp LEFT_ALT  &kp LEFT_ALT  &kp LGUI  &kp LSHIFT  &kp LS(LA(LC(LGUI)))    &braces        &kp DOLLAR       &kp PERCENT   &kp CARET     &kp PLUS
 &none  &none         &none         &none     &none       &none                   &brackets      &kp EXCLAMATION  &kp AT_SIGN   &kp POUND     &thans     &kp EQUAL
                                    &none     &none       &none                   &none          &none            &none
-            >;
-        };
+);
 
-        Fun {
-            label = "Fun";
-            bindings = <
+        ZMK_LAYER(Fun,
        &kp F12  &kp F7  &kp F8  &kp F9  &none    &none                 &none       &none     &none          &none
        &kp F11  &kp F4  &kp F5  &kp F6  &none    &kp RS(RA(RC(RGUI)))  &kp RSHIFT  &kp RGUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL
 &none  &kp F10  &kp F1  &kp F2  &kp F3  &none    &none                 &none       &none     &none          &none              &none
                         &none   &none   &none    &none                 &none       &none
-            >;
-        };
-    };
-};
+);
+
