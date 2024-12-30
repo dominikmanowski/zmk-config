@@ -16,11 +16,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define Base  0
-#define Nav   1
-#define Num   2
-#define Sym   3
-#define Fun   4
+#define Base 0
+#define Nav 1
+#define Num 2
+#define Sym 3
+#define Fun 4
 
 /*                   KEY POSITIONS
     ╭──────────────────────┬─────────────────────╮
