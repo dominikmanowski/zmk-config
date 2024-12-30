@@ -12,9 +12,7 @@ manifest:
       import: app/west.yml
     - name: zmk-auto-layer
       revision: main
-      path: modules/zmk/auto-layer
     - name: zmk-helper
       revision: main
-      path: modules/zmk/helpers
   self:
     path: config
