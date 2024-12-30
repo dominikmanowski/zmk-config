@@ -16,11 +16,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define Base 0
-#define Nav 1
-#define Num 2
-#define Sym 3
-#define Fun 4
+#define BASE 0
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define FUN 4
+
+#include "combos.dtsi"
 
 /*                   KEY POSITIONS
     ╭──────────────────────┬─────────────────────╮
@@ -105,14 +107,6 @@ SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
 // tap: qmark | shift + tap: excl
 SIMPLE_MORPH(qmark, SFT, &kp QMARK, &kp EXCL)
 
-// combos
-ZMK_COMBO(enter,     &th RS(RGUI) ENTER, RM1 RM2, Base)
-ZMK_COMBO(tab,       &th LS(LGUI) TAB,   LB2 LB1, Base)
-ZMK_COMBO(copy,      &kp LG(C),          LB2 LB1, Base)
-ZMK_COMBO(cut,       &kp LG(X),          LB3 LB2, Base)
-ZMK_COMBO(paste,     &kp LG(V),          LB3 LB1, Base)
-ZMK_COMBO(undo,      &kp LG(Z),          LB4 LB3, Base)
-ZMK_COMBO(caps-word, &caps_word,         LB4 LB3, Base)
 
 // aliases
 #define LHYPER LS(LA(LC(LGUI)))
