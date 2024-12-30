@@ -15,3 +15,6 @@ SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
 
 // tap: qmark | shift + tap: excl
 SIMPLE_MORPH(qmark, SFT, &kp QMARK, &kp EXCL)
+
+// tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
+SIMPLE_MORPH(bs_del, SFT, &kp BSPC, &kp DEL)
