@@ -16,11 +16,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define Base        0
-#define Nav         1
-#define Num         2
-#define Sym         3
-#define Fun         4
+#define Base  0
+#define Nav   1
+#define Num   2
+#define Sym   3
+#define Fun   4
 
 /*                   KEY POSITIONS
     ╭──────────────────────┬─────────────────────╮
@@ -40,7 +40,7 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                         // thumbs
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
-    ZMK_HOLD_TAP(NAME, \
+    ZMK_BEHAVIOR(NAME, hold_tap, \
         flavor = "balanced"; \
         tapping-term-ms = <280>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
@@ -122,27 +122,17 @@ ZMK_COMBO(caps-word, &caps_word,         LB4 LB3, Base)
 
 /* Keymap */
 
-
-/ {
-    keymap {
-        compatible = "zmk,keymap";
-
-        base_layer {
-            bindings <
-        //               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                            &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
-        //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                           &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHIFT F &hml hyper_G      &hmr hyper_H  &hmr RSHIFT J &hmr RGUI K   &hml RALT L  &hmr RCTRL SEMI
-        // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
-            &kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &comma_morph  &dot_morph    &qmark        &kp SQT
-        // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &kp ESC      &lt 1 SPACE    &lt 3 TAB         &lt 2 BSPC    &lt 4 SPACE   &kp RALT
-        //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-        >
-        }:
-    };
-};
-
+ZMK_LAYER(base_layer,
+     //               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                        &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
+     //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                        &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHIFT F &hml hyper_G      &hmr hyper_H  &hmr RSHIFT J &hmr RGUI K   &hml RALT L  &hmr RCTRL SEMI
+     // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
+          &kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &comma_morph  &dot_morph    &qmark        &kp SQT
+     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                    &kp ESC      &lt 1 SPACE    &lt 3 TAB         &lt 2 BSPC    &lt 4 SPACE   &kp RALT
+     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
 
 ZMK_LAYER(nav_layer,
      //               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
