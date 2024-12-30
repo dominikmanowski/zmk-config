@@ -13,8 +13,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/totem.h"
+#include "helper.h"
+#include "key-labels/totem.h"
 
 #define Base        0
 #define Nav         1
