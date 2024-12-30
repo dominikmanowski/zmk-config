@@ -10,17 +10,22 @@ ZMK_BEHAVIOR(tdr, tap_dance,
 
 ZMK_BEHAVIOR(brackets, tap_dance,
     tapping-term-ms = <175>;
-    bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+    bindings = <&kp LBKT>, <&kp RBKT>;
 )
 
 ZMK_BEHAVIOR(braces, tap_dance,
     tapping-term-ms = <175>;
-    bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+    bindings = <&kp LBRC>, <&kp RBRC>;
 )
 
 ZMK_BEHAVIOR(parenthesis, tap_dance,
     tapping-term-ms = <175>;
-    bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+    bindings = <&kp LPAR>, <&kp RPAR>;
+)
+
+ZMK_BEHAVIOR(thans, tap_dance,
+    tapping-term-ms = <175>;
+    bindings = <&kp LT>, <&kp GT>;
 )
 
 ZMK_HOLD_TAP(th,
