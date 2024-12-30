@@ -22,8 +22,6 @@
 #define SYM 3
 #define FUN 4
 
-#include "combos.dtsi"
-
 /*                   KEY POSITIONS
     ╭──────────────────────┬─────────────────────╮
     │  LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 │
@@ -107,6 +105,7 @@ SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
 // tap: qmark | shift + tap: excl
 SIMPLE_MORPH(qmark, SFT, &kp QMARK, &kp EXCL)
 
+#include "combos.dtsi"
 
 // aliases
 #define LHYPER LS(LA(LC(LGUI)))
