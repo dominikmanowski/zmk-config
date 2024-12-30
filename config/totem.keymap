@@ -93,7 +93,7 @@ SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
 // tap: qmark | shift + tap: excl
 SIMPLE_MORPH(qmark, SFT, &kp QMARK, &kp EXCL)
 
-#include "combos.dtsi"
+// #include "combos.dtsi"
 
 // aliases
 #define LHYPER LS(LA(LC(LGUI)))
