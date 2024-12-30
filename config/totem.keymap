@@ -117,8 +117,8 @@ ZMK_COMBO(caps-word, &caps_word,         LB4 LB3, Base)
 // aliases
 #define LHYPER LS(LA(LC(LGUI)))
 #define RHYPER RS(RA(RC(RGUI)))
-#define hyper_G LS(LA(LC(LGUI))) G
-#define hyper_H RS(RA(RC(RGUI))) H
+// #define hyper_G LS(LA(LC(LGUI))) G
+// #define hyper_H RS(RA(RC(RGUI))) H
 
 /* Keymap */
 
@@ -126,7 +126,7 @@ ZMK_LAYER(base_layer,
      //               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                         &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
      //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                        &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHIFT F &hml hyper_G      &hmr hyper_H  &hmr RSHIFT J &hmr RGUI K   &hml RALT L  &hmr RCTRL SEMI
+                        &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHIFT F &hml LS(LA(LC(LGUI))) G     &hmr RS(RA(RC(RGUI))) H  &hmr RSHIFT J &hmr RGUI K   &hml RALT L  &hmr RCTRL SEMI
      // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
           &kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &comma_morph  &dot_morph    &qmark        &kp SQT
      // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
