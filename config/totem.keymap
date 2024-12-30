@@ -107,7 +107,9 @@ ZMK_LAYER(base_layer,
      //               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                         &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
      //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                        &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHIFT F &hml LS(LA(LC(LGUI))) G     &hmr RS(RA(RC(RGUI))) H  &hmr RSHIFT J &hmr RGUI K   &hmr RALT L  &hmr RCTRL SEMI
+                        &kp LCTRL     &kp LALT      &kp LGUI      &kp LSHIFT    &kp LHYPER        &none         &tdl          &kp DOWN      &kp UP        &tdr
+
+                        // &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHIFT F &hml LS(LA(LC(LGUI))) G     &hmr RS(RA(RC(RGUI))) H  &hmr RSHIFT J &hmr RGUI K   &hmr RALT L  &hmr RCTRL SEMI
      // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
           &kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &comma_morph  &dot_morph    &qmark        &kp SQT
      // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
