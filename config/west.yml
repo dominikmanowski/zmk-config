@@ -1,17 +1,20 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-auto-layer
+      revision: main
       path: modules/zmk/auto-layer
-    - name: zmk-helpers
+    - name: zmk-helper
+      revision: main
       path: modules/zmk/helpers
   self:
     path: config
