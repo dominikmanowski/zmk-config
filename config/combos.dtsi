@@ -1,5 +1,5 @@
-// ZMK_COMBO(enter,     &th RS(RGUI) ENTER, RM1 RM2, Base)
-// ZMK_COMBO(tab,       &th LS(LGUI) TAB,   LB2 LB1, Base)
+ZMK_COMBO(enter,     &th RS(RGUI) ENTER, RM1 RM2, Base)
+ZMK_COMBO(tab,       &th LS(LGUI) TAB,   LB2 LB1, Base)
 ZMK_COMBO(copy,      &kp LG(C),          LB2 LB1, Base)
 ZMK_COMBO(cut,       &kp LG(X),          LB3 LB2, Base)
 ZMK_COMBO(paste,     &kp LG(V),          LB3 LB1, Base)
