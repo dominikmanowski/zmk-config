@@ -20,7 +20,7 @@
 
 */
 
-#include "config/home_row_mods.dtsi"
+#include "home_row_mods.dtsi"
 
 /* Custom behaviors */
 
