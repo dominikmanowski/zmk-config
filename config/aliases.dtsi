@@ -1,0 +1,4 @@
+#define LHPR &kp LS(LA(LC(LGUI)))
+#define RHPR &kp (RA(RC(RGUI)))
+#define HPR_G &hml LS(LA(LC(LGUI))) G
+#define HPR_H &hmr RS(RA(RC(RGUI))) H

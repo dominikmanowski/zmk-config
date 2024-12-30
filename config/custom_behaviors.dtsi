@@ -1,0 +1,32 @@
+ZMK_BEHAVIOR(tdl, tap_dance,
+    tapping-term-ms = <175>;
+    bindings = <&kp LEFT>, <&kp LA(LEFT_ARROW)>;
+)
+
+ZMK_BEHAVIOR(tdr, tap_dance,
+    tapping-term-ms = <175>;
+    bindings = <&kp RIGHT>, <&kp LA(RIGHT)>;
+)
+
+ZMK_BEHAVIOR(brackets, tap_dance,
+    tapping-term-ms = <175>;
+    bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+)
+
+ZMK_BEHAVIOR(braces, tap_dance,
+    tapping-term-ms = <175>;
+    bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+)
+
+ZMK_BEHAVIOR(parenthesis, tap_dance,
+    tapping-term-ms = <175>;
+    bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+)
+
+ZMK_HOLD_TAP(th,
+    flavor = "balanced";
+    tapping-term-ms = <175>;
+    quick-tap-ms = <125>;
+    bindings = <&kp>, <&kp>;
+    hold-while-undecided;
+)
