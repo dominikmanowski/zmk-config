@@ -5,6 +5,8 @@
 #include <behaviors/num_word.dtsi>
 #include "zmk-helpers/key-labels/totem.h"
 
+#define QUICK_TAP_MS 175
+
 #include "includes/layers.dtsi"
 #include "includes/home_row_mods.dtsi"
 #include "includes/custom_behaviors.dtsi"
