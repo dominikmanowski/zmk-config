@@ -2,8 +2,7 @@
 #define RHPR &kp (RA(RC(RGUI)))
 #define HPR_G &hml LS(LA(LC(LGUI))) G
 #define HPR_H &hmr RS(RA(RC(RGUI))) H
-// #define SMART_NUM &smart_num NUM // fix
-#define SMART_NUM &lt NUM BSPC // fix
+#define SMART_NUM &smart_num NUM 0
 #define NAV_SPACE &lt NAV SPACE 
-#define FUN_BS_DEL &lt FUN &bs_del // fix
+#define FUN_BS_DEL &lt FUN &bs_del
 #define SYM_TAB &lt SYM TAB // TAB should be replaced from here in favour of combo
