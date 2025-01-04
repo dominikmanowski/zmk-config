@@ -1,6 +1,6 @@
 ZMK_BEHAVIOR(tdl, tap_dance,
     tapping-term-ms = <175>;
-    bindings = <&kp LEFT>, <&kp LA(LEFT_ARROW)>;
+    bindings = <&kp LEFT>, <&kp LA(LEFT)>;
 )
 
 ZMK_BEHAVIOR(tdr, tap_dance,
