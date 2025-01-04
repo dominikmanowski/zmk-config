@@ -4,5 +4,4 @@
 #define HPR_H &hmr RS(RA(RC(RGUI))) H
 #define SMART_NUM &smart_num NUM 0
 #define NAV_SPACE &lt NAV SPACE 
-#define FUN_BS_DEL &lt FUN BSPC
 #define SYM_TAB &lt SYM TAB // TAB should be replaced from here in favour of combo
