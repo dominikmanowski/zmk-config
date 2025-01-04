@@ -47,11 +47,3 @@ ZMK_TAP_DANCE(num_dance,
     tapping-term-ms = <200>;
     bindings = <&num_word NUM>, <&sl NUM>;
 )
-
-ZMK_HOLD_TAP(sla,
-    flavor = "balanced";
-    tapping-term-ms = <175>;
-    quick-tap-ms = <125>;
-    bindings = <&kp>, <&sl>;
-    hold-while-undecided;
-)
