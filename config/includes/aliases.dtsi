@@ -5,3 +5,6 @@
 #define SMART_NUM &smart_num NUM 0
 #define NAV_SPACE &lt NAV SPACE 
 #define SYM_TAB &lt SYM TAB // TAB should be replaced from here in favour of combo
+
+// alt layer
+#define HPR_M &hmr RS(RA(RC(RGUI))) M

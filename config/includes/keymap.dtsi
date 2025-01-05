@@ -6,19 +6,19 @@ ZMK_LAYER(base_layer,
      // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
           &kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &comma_morph  &dot_morph    &excl         &kp SQT
      // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                    &kp ESC       NAV_SPACE     SYM_TAB           &bs_del       SMART_NUM      &sla RALT FUN 
+                                                    &esc_to_alt   NAV_SPACE     SYM_TAB           &bs_del       SMART_NUM      &sla RALT FUN 
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
 ZMK_LAYER(alt_layer,
      //               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                        &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
+                        &kp W         &kp L         &kp Y         &kp P         &kp B             &kp Z         &kp F         &kp O         &kp U         &kp SQT
      //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                        &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHIFT F HPR_G             HPR_H         &hmr RSHIFT J &hmr RGUI K   &hmr RALT L   &slash_morph 
+                        &hml LCTRL C  &hml LALT R   &hml LGUI S   &hml LSHIFT T HPR_G             HPR_M         &hmr RSHIFT N &hmr RGUI E   &hmr RALT I   &hmr RCTRL A 
      // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
-          &kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &comma_morph  &dot_morph    &excl         &kp SQT
+          &kp GRAVE     &kp Q         &kp J         &kp V         &kp D         &kp K             &kp X         &kp H         &slash_morph  &comma_morph  &dot_morph    &excl
      // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                    &kp ESC       NAV_SPACE     SYM_TAB           &bs_del       SMART_NUM      &sla RALT FUN
+                                                    &esc_to_def   NAV_SPACE     SYM_TAB           &bs_del       SMART_NUM      &sla RALT FUN
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 

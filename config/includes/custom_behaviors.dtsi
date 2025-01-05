@@ -54,3 +54,13 @@ ZMK_HOLD_TAP(sla,
     quick-tap-ms = <125>;
     bindings = <&kp>, <&sl>;
 )
+
+ZMK_TAP_DANCE(esc_to_alt,
+    tapping-term-ms = <200>;
+    bindings = <&kp ESC>, <&to ALT>;
+)
+
+ZMK_TAP_DANCE(esc_to_def,
+    tapping-term-ms = <200>;
+    bindings = <&kp ESC>, <&to BASE>;
+)
