@@ -14,7 +14,7 @@ SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
 SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
 
 // tap: / | shift + tap: | | ctrl + shift + tap: \
-SIMPLE_MORPH(slash_morph, SFT, &kp FSLH, &slash_inner_morph)
+SIMPLE_MORPH(slash, SFT, &kp FSLH, &slash_inner_morph)
 SIMPLE_MORPH(slash_inner_morph, CTL, &kp PIPE, &kp BSLH)
 
 // tap: excl | shift + tap: qmark
