@@ -8,9 +8,9 @@
 #define QUICK_TAP_MS 175
 
 #include "includes/layers.dtsi"
+#include "includes/morphs.dtsi"
 #include "includes/home_row_mods.dtsi"
 #include "includes/custom_behaviors.dtsi"
-#include "includes/morphs.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/aliases.dtsi"
 #include "includes/keymap.dtsi"
