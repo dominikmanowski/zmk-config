@@ -7,6 +7,24 @@
 
 #define QUICK_TAP_MS 175
 
+/ {
+    behaviors {
+        // tap: slash | shift + tap: pipe | ctrl + shift + tap: backslash
+        slash_inner_morph: slash_inner_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>, <&kp BSLH>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        slash_morph: slash_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&slash_inner_morph>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+
 #include "includes/layers.dtsi"
 #include "includes/morphs.dtsi"
 #include "includes/home_row_mods.dtsi"
