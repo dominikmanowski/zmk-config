@@ -19,7 +19,7 @@ ZMK_MOD_MORPH(slash_morph, \
     bindings = <&kp FSLH>, <&slash_inner_morph>;
 )
 ZMK_MOD_MORPH(NAME,
-    mods = <(MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>>;
+    mods = <(MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>;
     bindings = <&kp PIPE>, <&kp BSLH>;
 )
 
