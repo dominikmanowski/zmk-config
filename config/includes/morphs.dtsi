@@ -15,12 +15,12 @@ SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
 
 // tap: slash | shift + tap: pipe | ctrl + shift + tap: backslash
 ZMK_MOD_MORPH(slash_morph, \
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp FSLH>, <&slash_inner_morph>;
+    mods = <(MOD_LCTL|MOD_RCTL)>;
+    bindings = <&slash_inner_morph>, <&kp BSLH> ;
 )
 ZMK_MOD_MORPH(slash_inner_morph,
-    mods = <(MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>;
-    bindings = <&kp PIPE>, <&kp BSLH>;
+    mods = <(MOD_LSFT||MOD_RSFT)>;
+    bindings = <&kp FSLH>, <&kp PIPE> ;
 )
 
 // tap: excl | shift + tap: qmark
