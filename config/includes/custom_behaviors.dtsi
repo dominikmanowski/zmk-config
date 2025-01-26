@@ -5,7 +5,7 @@
         bindings = <TAP>, <DOUBLE_TAP>; \
     )
 
-MAKE_TD(tdl, <&kp LEFT>, <&kp LA(LEFT)>)
+MAKE_TD(tdl, &kp LEFT, &kp LA(LEFT))
 
 ZMK_BEHAVIOR(tdr, tap_dance,
     tapping-term-ms = <175>;
