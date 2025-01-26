@@ -1,7 +1,11 @@
-ZMK_BEHAVIOR(tdl, tap_dance,
-    tapping-term-ms = <175>;
-    bindings = <&kp LEFT>, <&kp LA(LEFT)>;
-)
+#define MAKE_TD(NAME, TAP, DOUBLE_TAP) \
+    ZMK_BEHAVIOR(NAME,\
+        tap_dance, \
+        tapping-term-ms = <190>; \
+        bindings = <TAP>, <DOUBLE_TAP>; \
+    )
+
+MAKE_TD(tdl, <&kp LEFT>, <&kp LA(LEFT)>)
 
 ZMK_BEHAVIOR(tdr, tap_dance,
     tapping-term-ms = <175>;
