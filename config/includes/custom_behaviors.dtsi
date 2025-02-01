@@ -1,36 +1,26 @@
 #define MAKE_TD(NAME, TAP, DOUBLE_TAP) \
-    ZMK_BEHAVIOR(NAME,\
-        tap_dance, \
-        tapping-term-ms = <190>; \
+    ZMK_TAP_DANCE(NAME,\
+        tapping-term-ms = <200>; \
         bindings = <TAP>, <DOUBLE_TAP>; \
     )
 
+// tap: left | double tap: alt + left
 MAKE_TD(tdl, &kp LEFT, &kp LA(LEFT))
 
-ZMK_BEHAVIOR(tdr, tap_dance,
-    tapping-term-ms = <175>;
-    bindings = <&kp RIGHT>, <&kp LA(RIGHT)>;
-)
+// tap: right | double tap: alt + right
+MAKE_TD(tdr, &kp RIGHT, &kp LA(RIGHT))
 
-ZMK_BEHAVIOR(brackets, tap_dance,
-    tapping-term-ms = <175>;
-    bindings = <&kp LBKT>, <&kp RBKT>;
-)
+// tap: open bracket | double tap: close bracket
+MAKE_TD(brackets, &kp LBKT, &kp RBKT)
 
-ZMK_BEHAVIOR(braces, tap_dance,
-    tapping-term-ms = <175>;
-    bindings = <&kp LBRC>, <&kp RBRC>;
-)
+// tap: left curly brace | double tap: right curly brace
+MAKE_TD(braces, &kp LBRC, &kp RBRC)
 
-ZMK_BEHAVIOR(parenthesis, tap_dance,
-    tapping-term-ms = <175>;
-    bindings = <&kp LPAR>, <&kp RPAR>;
-)
+// tap: left parenthesis | double tap: right parenthesis
+MAKE_TD(parenthesis, &kp LPAR, &kp RPAR)
 
-ZMK_BEHAVIOR(thans, tap_dance,
-    tapping-term-ms = <175>;
-    bindings = <&kp LT>, <&kp GT>;
-)
+// tap: less than | double tap: greater than
+MAKE_TD(thans, &kp LT, &kp GT)
 
 ZMK_HOLD_TAP(th,
     flavor = "balanced";
@@ -47,10 +37,7 @@ ZMK_HOLD_TAP(smart_num,
     bindings = <&mo>, <&num_dance>;
 )
 
-ZMK_TAP_DANCE(num_dance,
-    tapping-term-ms = <200>;
-    bindings = <&num_word NUM>, <&sl NUM>;
-)
+MAKE_TD(num_dance, &sl NUM, &num_word NUM)
 
 ZMK_HOLD_TAP(sla,
     flavor = "balanced";
