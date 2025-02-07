@@ -8,6 +8,9 @@
 
 */
 
+#undef COMBO_TERM
+#define COMBO_TERM 50
+
 ZMK_COMBO(enter,     &th RS(RGUI) ENTER, RM1 RM2, BASE ALT)
 ZMK_COMBO(tab,       &th LS(LGUI) TAB,   LM2 LM1, BASE ALT)
 ZMK_COMBO(copy,      &kp LG(C),          LB2 LB1, BASE ALT)
